@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+
+<!-- Mirrored from seantheme.com/admetro/table_data.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 16 Dec 2019 19:03:21 GMT -->
+<head>
+	<meta charset="utf-8" />
+	<title>Admetro | DataTables</title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+	<meta content="" name="description" />
+	<meta content="" name="author" />
+	
+	<!-- ================== BEGIN BASE CSS STYLE ================== -->
+	<link href="{{asset('resources/css/css/app.min.css')}}" rel="stylesheet" />
+	<!-- ================== END BASE CSS STYLE ================== -->
+	
+	<!-- ================== BEGIN PAGE CSS STYLE ================== -->
+	<link href="../index.html" rel="stylesheet" />
+	<link href="{{asset('resources/css/css/plugins/datatables.net-autofill-bs4/css/autoFill.bootstrap4.min.css')}}" rel="stylesheet" />
+	<link href="{{asset('resources/css/css/plugins/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css')}}" rel="stylesheet" />
+	<link href="{{asset('resources/css/css/plugins/datatables.net-colreorder-bs4/css/colReorder.bootstrap4.min.css')}}" rel="stylesheet" />
+	<link href="{{asset('resources/css/css/plugins/datatables.net-fixedcolumns-bs4/css/fixedColumns.bootstrap4.min.css')}}" rel="stylesheet" />
+	<link href="{{asset('resources/css/css/plugins/datatables.net-fixedheader-bs4/css/fixedHeader.bootstrap4.min.css')}}" rel="stylesheet" />
+	<link href="{{asset('resources/css/css/plugins/datatables.net-keytable-bs4/css/keyTable.bootstrap4.min.css')}}" rel="stylesheet" />
+	<link href="{{asset('resources/css/css/plugins/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css')}}" rel="stylesheet" />
+	<link href="{{asset('resources/css/css/plugins/datatables.net-rowgroup-bs4/css/rowGroup.bootstrap4.min.css')}}" rel="stylesheet" />
+	<link href="{{asset('resources/css/css/plugins/datatables.net-rowreorder-bs4/css/rowReorder.bootstrap4.min.css')}}" rel="stylesheet" />
+	<link href="{{asset('resources/css/css/plugins/datatables.net-scroller-bs4/css/scroller.bootstrap4.min.css')}}" rel="stylesheet" />
+	<link href="{{asset('resources//css/css/plugins/datatables.net-select-bs4/css/select.bootstrap4.min.css')}}" rel="stylesheet" />
+	<!-- ================== END PAGE CSS STYLE ================== -->
+</head>
+<body>
+	<!-- BEGIN #app -->
+	<div id="app" class="app app-header-fixed app-sidebar-fixed">
+		<!-- BEGIN #header -->
+		<header id="header" class="app-header">
+			<!-- BEGIN navbar-toggle-minify -->
+			<button type="button" class="navbar-toggle navbar-toggle-minify" data-click="sidebar-minify">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<!-- END navbar-toggle-minify -->
+			<!-- BEGIN navbar-header -->
+			<div class="navbar-header">
+				<a href="index-2.html" class="navbar-brand">
+					
+				</a>
+				<button type="button" class="navbar-toggle" data-click="sidebar-toggled">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<!-- END navbar-header -->
+			<!-- BEGIN navbar-nav -->
+			<ul class="navbar-nav navbar-right">
+				<li class="nav-item">
+					<a href="#" data-toggle="search-bar" class="nav-link">
+						<i class="fa fa-search nav-icon"></i>
+					</a>
+				</li>
+				<li class="nav-item dropdown">
+					<a href="#" data-toggle="dropdown" data-display="static" class="nav-link">
+						<i class="far fa-bell nav-icon"></i>
+						<span class="nav-label">3</span>
+					</a>
+					<ul class="dropdown-menu dropdown-menu-right dropdown-menu-lg pt-0 pb-0">
+						<li class="dropdown-header"><a href="#" class="dropdown-close">&times;</a>Today</li>
+						<li class="dropdown-message">
+							<a href="#">
+								<div class="icon"><i class="fab fa-apple bg-primary"></i></div>
+								<div class="info">
+									<h4 class="title">App Store <span class="time">Just now</span></h4>
+									<p class="desc">Your iOS application has been approved</p>
+								</div>
+							</a>
+						</li>
+						<li class="dropdown-message">
+							<a href="#">
+								<div class="icon"><i class="fab fa-android bg-success"></i></div>
+								<div class="info">
+									<h4 class="title">Google Play <span class="time">5 min ago</span></h4>
+									<p class="desc">Your android application has been approved</p>
+								</div>
+							</a>
+						</li>
+						<li class="dropdown-message">
+							<a href="#">
+								<div class="icon"><i class="fab fa-github bg-muted"></i></div>
+								<div class="info">
+									<h4 class="title">Github  <span class="time">12 min ago</span></h4>
+									<p class="desc">Error with notifications from Private Repos</p>
+								</div>
+							</a>
+						</li>
+						<li class="dropdown-header"><a href="#" class="dropdown-close">&times;</a>Yesterday</li>
+						<li class="dropdown-message">
+							<a href="#">
+								<div class="icon"><i class="fa fa-envelope bg-purple"></i></div>
+								<div class="info">
+									<h4 class="title">Gmail  <span class="time">12:50pm</span></h4>
+									<p class="desc">You have 2 unread email</p>
+								</div>
+							</a>
+						</li>
+						<li class="dropdown-message">
+							<a href="#">
+								<div class="icon"><div class="img" style="background-image: url(assets/img/user-2.jpg)"></div></div>
+								<div class="info">
+									<h4 class="title">Corey  <span class="time">10:20am</span></h4>
+									<p class="desc">There's so much room for activities!</p>
+								</div>
+							</a>
+						</li>
+						<li class="dropdown-message">
+							<a href="#">
+								<div class="icon"><i class="fab fa-twitter bg-gradient-aqua"></i></div>
+								<div class="info">
+									<h4 class="title">Twitter  <span class="time">12:50pm</span></h4>
+									<p class="desc">@sergiolucas: Most rain in the last two days: 85mm Gabo Island (March)</p>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="nav-item dropdown">
+					<a href="#" data-toggle="dropdown" data-display="static" class="nav-link">
+						<i class="fa fa-cog nav-icon"></i>
+					</a>
+					<ul class="dropdown-menu dropdown-menu-right dropdown-menu-md pt-0 pb-0">
+						<li class="dropdown-header">Notifications Settings</li>
+						<li class="dropdown-setting">
+							<div class="icon"><i class="fa fa-envelope text-muted"></i></div>
+							<div class="info">Email</div>
+							<div class="option">
+								<div class="switcher switcher-success">
+									<input type="checkbox" name="setting_1" id="setting_1" checked />
+									<label for="setting_1"></label>
+								</div>
+							</div>
+						</li>
+						<li class="dropdown-setting">
+							<div class="icon"><i class="fa fa-desktop text-muted"></i></div>
+							<div class="info">Desktop & Mobile</div>
+							<div class="option">
+								<div class="switcher switcher-success">
+									<input type="checkbox" name="setting_2" id="setting_2" checked />
+									<label for="setting_2"></label>
+								</div>
+							</div>
+						</li>
+						<li class="dropdown-setting">
+							<div class="icon"><i class="fa fa-comment-alt text-muted"></i></div>
+							<div class="info">Text message</div>
+							<div class="option">
+								<div class="switcher switcher-success">
+									<input type="checkbox" name="setting_3" id="setting_3" />
+									<label for="setting_3"></label>
+								</div>
+							</div>
+						</li>
+						<li class="dropdown-header">Privacy Settings</li>
+						<li class="dropdown-setting">
+							<div class="icon"><i class="fa fa-list-ul text-muted"></i></div>
+							<div class="info">Public friends list</div>
+							<div class="option">
+								<div class="switcher switcher-success">
+									<input type="checkbox" name="setting_4" id="setting_4" />
+									<label for="setting_4"></label>
+								</div>
+							</div>
+						</li>
+						<li class="dropdown-setting">
+							<div class="icon"><i class="fa fa-user-secret text-muted"></i></div>
+							<div class="info">Public profile page</div>
+							<div class="option">
+								<div class="switcher switcher-success">
+									<input type="checkbox" name="setting_5" id="setting_5" checked />
+									<label for="setting_5"></label>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</li>
+				<li class="nav-item dropdown">
+					<a href="#" data-toggle="dropdown" data-display="static" class="nav-link">
+						<span class="nav-img online">
+							<img src="assets/img/user.jpg" alt="" />
+						</span>
+						<span class="d-none d-md-block">Ludovic Yao <b class="caret"></b></span>
+					</a>
+					
+				</li>
+			</ul>
+			<!-- END navbar-nav -->
+			<!-- BEGIN navbar-search -->
+			<div class="navbar-search">
+				<form action="#" method="POST" name="navbar_search_form">
+					<div class="form-group">
+						<div class="icon"><i class="fa fa-search"></i></div>
+						<input type="text" class="form-control" id="header-search" placeholder="Search admetro..." />
+						<div class="icon">
+							<a href="#" data-dismiss="search-bar" class="right-icon"><i class="fa fa-times"></i></a>
+						</div>
+					</div>
+				</form>
+			</div>
+			<!-- END navbar-search -->
+		</header>
+		<!-- END #header -->
+		
+		
+		
+		<!-- BEGIN #content -->
+		<div id="content" class="app-content">
+			<!-- BEGIN breadcrumb -->
+			
+			<!-- END breadcrumb -->
+			<!-- BEGIN page-header -->
+			
+			<!-- END page-header -->
+			<!-- BEGIN card -->
+			<div class="card ">
+				<!-- BEGIN card-header -->
+				<div class="card-header card-header-inverse">
+					<h4 class="card-header-title">
+						Tables 
+					</h4>
+					<div class="card-header-btn">
+						<a href="#" data-toggle="card-expand" class="btn btn-success"><i class="fa fa-expand"></i></a>
+						<a href="#" data-toggle="card-refresh" class="btn btn-warning"><i class="fa fa-redo"></i></a>
+						<a href="#" data-toggle="card-remove" class="btn btn-danger"><i class="fa fa-trash-alt"></i></a>
+					</div>
+				</div>
+				<!-- END card-header -->
+				<div class="card-body">
+					<!-- BEGIN table -->
+					{{ csrfField() }}
+					<table id="datatables-default" class="table table-striped table-td-valign-middle table-bordered bg-white">
+						<thead>
+							<tr>
+								<th width="1%" class="no-sort">#</th>
+								<th width="10%">Nom</th>
+								<th width="20%">prenom</th>
+								<th width="10%">numero</th>
+								<th width="10%">Email</th>
+								<th width="10%">refference de paiement</th>
+								<th width="10%">Action</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								@each(done in dones)
+								<td>{{ done.id }}</td>
+								<td>{{ done.nom }}</td>
+								<td>{{ done.prenom }}</td>
+								<td>{{ done.numero }}</td>
+								<td>{{ done.email }}</td>
+								<td>{{ done.ticket_code }}</td>
+								<td class="btn-col text-nowrap" width="1%">
+									<a href="/generate-ticket/{{ done.id }}" class="btn btn-success btn-xs" >Générer Ticket</a>
+								</td>
+								
+							</tr>
+							@endeach
+						</tbody>
+					</table>
+					<!-- END table -->
+				</div>
+			</div>
+		</div>
+		<!-- END #content -->
+		
+		<!-- BEGIN btn-scroll-top -->
+		<a href="#" data-click="scroll-top" class="btn-scroll-top fade"><i class="fa fa-arrow-up"></i></a>
+		<!-- END btn-scroll-top -->
+	</div>
+	<!-- END #app -->
+	
+	
+	<script>
+		async function generateTicket(ticketId) {
+			console.log("generateTicket")
+
+			if (confirm("Voulez-vous générer un ticket pour id " + ticketId + " ?")) {
+				try {
+					console.log("before")
+					const response = await fetch(`http://localhost:3333/generate-ticket`, { 
+						method: "POST",
+						header: {
+							"Content-Type": "application/json",
+							"Accept": "application/json",
+							"X-Requested-With": "XMLHttpRequest",
+							"X-CSRF-Token": $('input[name="_csrf"]').val()
+						},
+						body: JSON.stringify({'ticketId' : ticketId})
+					}).then(response => console.log(response.json())) 
+					console.log("After")
+					console.log(response);
+					const result = await response.json();
+					console.log(result);
+	
+					if (response.ok) {
+						alert("Ticket généré avec succès !");
+						location.reload(); // Rafraîchir la page pour voir la mise à jour
+					} else {
+						alert("Erreur : " + result.message);
+					}
+				} catch (error) {
+					console.error("Erreur lors de la génération du ticket:", error);
+					alert("Une erreur est survenue.");
+				}
+			}
+		}
+	</script>
+	
+
+	<!-- ================== BEGIN BASE JS ================== -->
+	<script src="{{asset('resources/js/js/app.min.js')}}"></script>
+	<!-- ================== END BASE JS ================== -->
+	
+	<!-- ================== BEGIN PAGE LEVEL JS ================== -->
+	<script src="{{asset('resources/plugins/datatables.net-bs4/js/dataTables.bootstrap4.min.js')}}"></script>
+	<script src="{{asset('pages/plugins/datatables.net/js/jquery.dataTables.min.js')}}"></script>
+	<script src="{{asset('resources/plugins/datatables.net-autofill/js/dataTables.autoFill.min.js')}}"></script>
+	<script src="{{asset('resources/plugins/datatables.net-autofill-bs4/js/autoFill.bootstrap4.min.js')}}"></script>
+	<script src="{{asset('resources/datatables.net-buttons/js/dataTables.buttons.min.js')}}"></script>
+	<script src="{{asset('resources/plugins/datatables.net-buttons/js/buttons.colVis.min.js')}}"></script>
+	<script src="{{asset('resources/plugins/datatables.net-buttons/js/buttons.flash.min.js')}}"></script>
+	<script src="{{asset('resources/plugins/datatables.net-buttons/js/buttons.html5.min.js')}}"></script>
+	<script src="{{asset('resources/plugins/datatables.net-buttons/js/buttons.print.min.js')}}"></script>
+	<script src="{{asset('resources/plugins/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js')}}"></script>
+	<script src="{{asset('resources/plugins/datatables.net-colreorder/js/dataTables.colReorder.min.js')}}"></script>
+	<script src="{{asset('resources/plugins/datatables.net-colreorder-bs4/js/colReorder.bootstrap4.min.js')}}"></script>
+	<script src="{{asset('resources/lugins/datatables.net-fixedcolumns/js/dataTables.fixedColumns.min.js')}}"></script>
+	<script src="{{asset('resources/plugins/datatables.net-fixedcolumns-bs4/js/fixedColumns.bootstrap4.min.js')}}"></script>
+	<script src="{{asset('resources/plugins/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js')}}"></script>
+	<script src="{{asset('resources/plugins/datatables.net-fixedheader-bs4/js/fixedHeader.bootstrap4.min.js')}}"></script>
+	<script src="{{asset('resources/plugins/datatables.net-keytable/js/dataTables.keyTable.min.js')}}"></script>
+	<script src="{{asset('resources/plugins/datatables.net-keytable-bs4/js/keyTable.bootstrap4.min.js')}}"></script>
+	<script src="{{asset('resources/plugins/datatables.net-responsive/js/dataTables.responsive.min.js')}}"></script>
+	<script src="{{asset('resources/plugins/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js')}}"></script>
+	<script src="{{asset('resources/plugins/datatables.net-rowgroup/js/dataTables.rowGroup.min.js')}}"></script>
+	<script src="{{asset('resources/plugins/datatables.net-rowgroup-bs4/js/rowGroup.bootstrap4.min.js')}}"></script>
+	<script src="{{asset('resources/plugins/datatables.net-scroller/js/dataTables.scroller.min.js')}}"></script>
+	<script src="{{asset('resources/plugins/datatables.net-scroller-bs4/js/scroller.bootstrap4.min.js')}}"></script>
+	<script src="{{asset('resources/plugins/datatables.net-select/js/dataTables.select.min.js')}}"></script>
+	<script src="{{asset('resources/plugins/datatables.net-select-bs4/js/select.bootstrap4.min.js')}}"></script>
+	<script src="{{asset('resources/js/demo/table-data.demo.js')}}"></script>
+	<!-- ================== END PAGE LEVEL JS ================== -->
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-53034621-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+</body>
+
+<!-- Mirrored from seantheme.com/admetro/table_data.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 16 Dec 2019 19:04:01 GMT -->
+</html>

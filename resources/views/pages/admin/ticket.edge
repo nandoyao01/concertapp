@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket FestiLove</title>
+
+    <style>
+        body {
+            background-color: #436ea5;
+        }
+
+        #qrcode {
+            
+        }
+
+        .ticket {
+            font-family: sans-serif;
+            background-repeat: no-repeat;
+            background-position: top;
+            background-size: 100%;
+            background-color: #04030C;
+            width: 700px;
+            height: 300px;
+            border-radius: 15px;
+            box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+            display: block;
+            margin: 10% auto;
+            color: #fff;
+            position: relative;
+        }
+
+        .date {
+            margin: 15px;
+            filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.3));
+        }
+
+        .date .day {
+            font-size: 80px;
+            float: left;
+        }
+
+        .date .month-and-time {
+            float: left;
+            margin: 15px 0 0 0;
+            font-weight: bold;
+        }
+
+        .artist {
+            font-size: 30px;
+            margin: 10px 100px 0 40px;
+            float: left;
+            font-weight: bold;
+        }
+
+        .location {
+            float: left;
+            margin: 135px 0 0 78px;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .rip {
+            border-right: 8px dotted #436ea5;
+            height: 300px;
+            position: absolute;
+            top: 0;
+            left: 530px;
+        }
+
+        .cta .buy {
+            position: absolute;
+            top: 135px;
+            right: 15px;
+            display: block;
+            font-size: 12px;
+            font-weight: bold;
+            background-color: #436ea5;
+            padding: 10px 20px;
+            border-radius: 25px;
+            color: #fff;
+            text-decoration: none;
+            transform: rotate(-90deg);
+            filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.3));
+        }
+
+        .small {
+            font-weight: 200;
+        }
+
+        .ticket-1 {
+            background-image: url(https://images.unsplash.com/photo-1483101974978-cf266fdf1139?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3289&q=80);
+            {{-- background-image: {{asset('resources/img/bg-ticket.avif')}}; --}}
+            
+        }
+
+        /* QR Code Styling */
+        .qrcode-container {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            width: 130px;
+            height: 130px;
+            z-index: auto;
+            background: #fff;
+            border-radius: 4px;
+        }
+
+        #qrcode {
+            width: 120px;
+            height: 120px;
+            margin-left: 5px;
+            margin-top: 5px;
+            background: blue;
+        }
+
+        #qrcode > canvas,
+        #qrcode > img {
+            width: 120px !important;
+            height: 120px !important;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="ticket ticket-1" id="pdf">
+        <div class="date">
+            <span class="day">14</span>
+            <span class="month-and-time">FEV</br><span class="small">6pm</span></span>
+        </div>
+
+        <input type="hidden" id="ref" value="{{ done.ticket_code }}">
+
+        <div class="artist">
+            <span class="name">FestiLove</span>
+            </br>
+            <span class="live small">{{done.prenom}}</span>
+        </div>
+      
+        <div class="location">
+            <span>Le Goulet Rd, Balaclava</span>
+            </br>
+            <span class="small"><span>Ocean's Creek Mauritius</span></span>
+        </div>
+
+        <!-- QR Code Container -->
+        <div class="qrcode-container">
+            <div id="qrcode"></div>
+        </div>
+
+        <div class="rip"></div>
+        
+        <div class="cta">
+            <button class="buy">{{done.numero}}</button>
+        </div>
+    </div>
+    
+
+    <script src="{{asset(`resources//js/js/qrcode.js`)}}"></script>
+
+    <script type="text/javascript">
+        var text = document.getElementById("ref").value;
+        new QRCode(document.getElementById("qrcode"), text);
+    </script>
+
+</body>
+</html>
